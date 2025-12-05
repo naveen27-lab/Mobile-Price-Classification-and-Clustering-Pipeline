@@ -1,0 +1,4 @@
+model,accuracy_or_silhouette
+SVM,0.895
+KNN,0.5
+KMeans,0.05832893565066213

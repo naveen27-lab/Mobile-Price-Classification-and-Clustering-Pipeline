@@ -1,0 +1,81 @@
+=== BASIC EDA ===
+Shape: (2000, 21)
+
+Columns: ['battery_power', 'blue', 'clock_speed', 'dual_sim', 'fc', 'four_g', 'int_memory', 'm_dep', 'mobile_wt', 'n_cores', 'pc', 'px_height', 'px_width', 'ram', 'sc_h', 'sc_w', 'talk_time', 'three_g', 'touch_screen', 'wifi', 'price_range']
+
+Missing values per column:
+ battery_power    0
+blue             0
+clock_speed      0
+dual_sim         0
+fc               0
+four_g           0
+int_memory       0
+m_dep            0
+mobile_wt        0
+n_cores          0
+pc               0
+px_height        0
+px_width         0
+ram              0
+sc_h             0
+sc_w             0
+talk_time        0
+three_g          0
+touch_screen     0
+wifi             0
+price_range      0
+dtype: int64
+
+Class distribution (price_range):
+ price_range
+1    500
+2    500
+3    500
+0    500
+Name: count, dtype: int64
+
+=== SVM Results ===
+Accuracy: 0.895
+
+Classification report:
+               precision    recall  f1-score   support
+
+           0       0.96      0.94      0.95       100
+           1       0.87      0.87      0.87       100
+           2       0.82      0.87      0.84       100
+           3       0.94      0.90      0.92       100
+
+    accuracy                           0.90       400
+   macro avg       0.90      0.90      0.90       400
+weighted avg       0.90      0.90      0.90       400
+
+
+=== KNN Results (k=5) ===
+Accuracy: 0.5
+
+Classification report:
+               precision    recall  f1-score   support
+
+           0       0.65      0.70      0.67       100
+           1       0.33      0.38      0.35       100
+           2       0.39      0.41      0.40       100
+           3       0.72      0.51      0.60       100
+
+    accuracy                           0.50       400
+   macro avg       0.52      0.50      0.51       400
+weighted avg       0.52      0.50      0.51       400
+
+
+=== K-Means Clustering Results ===
+Silhouette score: 0.05832893565066213
+
+Cluster vs price_range contingency table:
+price_range    0    1    2    3
+cluster                        
+0             81  116   98  149
+1            127  119  113  111
+2             97  109  131  113
+3            195  156  158  127
+
+Saved results/model_summary.csv
